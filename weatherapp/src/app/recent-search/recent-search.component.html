@@ -1,0 +1,46 @@
+<app-constant-assets></app-constant-assets>
+
+<div class="noFavdis" *ngIf="recentCity===null|| recentCity?.length<1">
+    <div class="img"><img src="/assets/icon_nothing.png" alt=""></div>
+    <div class="txt">No Recent Searches</div>
+</div>
+
+
+<div class="main" *ngIf="recentCity?.length>=1">
+    <div class="subheader">
+        <div class="mobileHead">
+            <div><mat-icon class="arrowIcon" (click)="backToHome()">arrow_back</mat-icon></div>
+            <div class="headerText">Recent Search</div>
+            <div><mat-icon class="searchMatIcon">search</mat-icon></div>
+        </div>
+        <div class="msg">
+            <span>{{recentCity.length}} recent searches</span>
+        </div>
+        <button (click)="recentDialog()" class="remove">
+            Clear All
+        </button>
+    </div>
+    <div class="row" *ngFor="let data of recentCity"  (click)="goBack(data)">
+         <div class="place">{{data['name']}}</div>
+         <div class="temperature">
+             <div class="icon"><img src="http://openweathermap.org/img/wn/{{data['weather'][0].icon}}@2x.png" id="icon" alt=""></div>
+             <div class="cont">
+                 <div class="deg">
+                    {{(data['main'].temp -273.15).toFixed(0)}} <span class="temp">&#176;C</span>
+                 </div>
+             </div>
+             <div class="comment">
+                {{(data['weather'][0].description | titlecase)}}
+             </div>
+         </div>
+         
+         {{check(data['name'])}}
+         <div class="fav">
+             <mat-icon class="favB" (click)="addDisPlace(data)" *ngIf="favBorder" >favorite_border</mat-icon>
+             <mat-icon  class="favF"*ngIf="fav" (cklick)="removeFav(data)" [ngClass]="filled">favorite</mat-icon>
+         </div>
+         
+     </div>
+ 
+</div>
+   

@@ -1,0 +1,88 @@
+<app-constant-assets></app-constant-assets>
+<div class="main">
+   <div class="aligncenter">
+
+    <div class="dates">
+        {{date|date:'E'|uppercase}},&nbsp;{{date|date:'mediumDate'|uppercase}}&nbsp;&nbsp;{{date|date:'shortTime'|uppercase}}
+    </div>
+
+    <div id="city">{{cityWeather.name}}&nbsp;</div>
+    <div class="addfav" >
+        <div class="icon" >
+         
+            <mat-icon [ngClass]="color" [innerText]="border" (click)="fav()"></mat-icon>
+        </div>
+        <div  class="favtext" [ngClass]="color" [innerText]="text" >
+        </div>
+    </div>
+   </div>
+    <div class="center">
+        <div class="imgsunny">
+            <img src="http://openweathermap.org/img/wn/{{cityWeather['weather'][0].icon}}@2x.png" id="sunny" alt="">
+        </div>
+        <div class="temperature">
+            <div class="temptext">
+               
+                <p *ngIf="celsius"> {{(cityWeather['main'].temp -273.15).toFixed(0)}}</p>
+                <p *ngIf="farhan"> {{(((cityWeather['main'].temp-273.15)*1.8)+32).toFixed(0)}}</p>
+                <button id="degbtn" [ngClass]="cf"  type="button" (click)="degCel()">
+                    &#176;C
+                </button>
+                <button id="degbtn" [ngClass]="cff" type="button" (click)="degFar()">
+                    &#176;F
+                </button>
+            </div>
+            <div class="comment">
+                {{(cityWeather['weather'][0].description|titlecase)}}
+            </div>
+
+        </div>
+    </div>
+<hr>
+    <div class="footer">
+        <div class="elem">
+
+            <div class="iconImg"><img id="icon1" src="assets/temp.png" alt=""></div>
+            <div class="container">
+                <div class="text">Min-Max</div>
+                <div class="extent">{{(cityWeather['main'].temp_max -273.15).toFixed(0)}}&#176;-{{(cityWeather['main'].temp_min -273.15).toFixed(0)}}&#176;</div>
+
+            </div>
+
+        </div>
+        <div class="elem">
+            <div class="iconImg"><img id="" src='/assets/icon_precipitation_info.png' alt=""></div>
+            <div class="container">
+                <div class="text">Precipitation</div>
+                <div class="extent">{{(cityWeather['main'].sea_level)}}%</div>
+            </div>
+        </div>
+        <div class="elem">
+
+            <div class="iconImg"> <img src="/assets/icon_humidity_info.png"  alt=""></div>
+            <div class="container">
+                <div class="text">Humidity</div>
+                <div class="extent">{{(cityWeather['main'].humidity)}}%</div>
+            </div>
+
+
+        </div>
+        <div class="elem">
+            <div class="iconImg"><img src="/assets/icon_wind_info.png" id="" alt=""></div>
+            <div class="container">
+                <div class="text">Wind</div>
+                <div class="extent">{{(cityWeather['wind'].speed)}} mph</div>
+            </div>
+        </div>
+
+        <div class="elem">
+            <div class="iconImg"><img src="/assets/icon_visibility_info.png" id="" alt=""></div>
+            <div class="container">
+                <div class="text">Visibility</div>
+                <div class="extent">{{(cityWeather['main'].grnd_level)}} mph</div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

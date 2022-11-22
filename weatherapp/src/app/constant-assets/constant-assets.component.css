@@ -1,0 +1,234 @@
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+.active{
+    color:#FFD639;
+    border-bottom: 2px solid #FFD639;
+}
+#search{
+   
+   width:25rem;
+   padding: 0.7rem;
+   border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 3px;
+    background-color: rgba(255,255,255,0.1);
+    outline: none;
+    color: #FFFFFF;
+}
+::placeholder{
+    opacity: 0.7;
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 19px;
+    
+}
+.search{
+    position: absolute;
+}
+
+.searchIcon{
+    position: relative;
+    padding: 0.2rem;
+    
+}
+.searchbar{
+    align-items: flex-end;
+    display: flex;
+    justify-content:flex-end;
+}
+li{
+    list-style: none;
+    display: inline;
+    margin-right: 40px;
+    color:white;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 15px;
+    cursor: pointer;
+}
+.nav  {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.mat-body p, .mat-body-1 p, .mat-typography .mat-body p, .mat-typography .mat-body-1 p, .mat-typography p {
+    margin: 0 0 0 0 !important;
+}
+.date{
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-size: 14px;
+    letter-spacing: 0;
+    text-align: right;
+    margin: 0%;
+    padding: 0%;
+   margin-top: 13px;
+}
+hr{
+    color: white;
+    opacity: 0.3;
+    margin-top: -15px;
+}
+.menu{
+    display: none;
+}
+.sideBar{
+    display: none;
+}
+
+.tab{
+    display: block;
+    padding: 0%;
+    padding-inline-start: 20px;
+    width: 100%;
+}
+.searchPagee{
+    display: none;
+}
+#search1{
+    display: none;
+}
+#arrowIcon{
+    display: none;
+}
+.main{
+    margin: 4% 8% 0% 8%; 
+}
+
+@media screen and (max-width:767px){
+    #search{
+        width:15rem;
+    }
+}
+@media screen and (max-width:767px){
+    li{
+        list-style: none;
+        display: inline;
+        margin-right: 25px;
+        color:white;
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0;
+        line-height: 15px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width:550px){
+    #search{
+        display: none;
+    }
+    .logo{
+        margin-left: 5rem;
+    }
+    .tab{
+        display: block;
+    }
+    .nav{
+       /* display: flex;
+       justify-content: center;
+       align-items: center; 
+       border-bottom: none; */
+       display: none;
+    }
+    .date{
+        display: none;
+    }
+    .menu{
+        display: block;
+        margin-right: 5rem;
+        margin-top: -2rem;
+    }
+    .searchIcon{
+        margin-top: -2.2rem;
+    }
+    
+    .menuIcon {
+        color: white;
+        position: absolute;
+        top: 1.5rem;
+        left: 1rem;
+        /* right: 0; */
+    }
+    .matSearch{
+            position: absolute;
+            right: -1.3rem;
+            top: -1.7rem;
+    }
+    .sideBar{
+        display: block;
+        display: flex;
+        flex-direction: column;
+        background-color: #FFFFFF;
+        height: 97.5vh;
+        width: 75vw;
+        top: 0;
+        left: 0;
+        position: absolute;
+        z-index: 1;
+        align-items: flex-start;
+        cursor: pointer;
+    }
+    hr{
+        display: none;
+    }
+    .tabcontent{
+        color:grey;
+        padding-top: 15px;
+        padding-left: 15px;
+        font-weight: 500;
+
+    }
+    
+    .menu{
+        display: block;
+    }
+    .tab:hover{
+        color: black;
+    }
+    .searchPagee{
+        display: block;
+        display: flex;
+        background-color: white;
+        height: 100vh;
+        width: 100vw;
+        top: 0;
+        left: 0;
+        position: absolute;
+        border-bottom: solid 1px rgb(0, 0, 0);
+    }
+    #search1{
+        display: block;
+        width: 150%;
+        padding: 20px;
+        border: none;
+        outline: none;
+        border-bottom: solid 1px rgb(0, 0, 0,0.2);
+    }
+    ::placeholder{
+        color: gray;
+        outline: none;
+    }
+    #arrowIcon{
+        display: block;
+        color: black;
+        cursor: pointer;
+        padding: 10px;
+        padding-top: 20px;
+    }
+
+}
+
+
+
+

@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    flex-direction: column;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.button{
+    display: flex;
+    margin-top: 3rem;
+}
+.msg{
+    margin-top: 1rem;
+    font-size:18px;
+    font-weight: 400;
+}
+.btn{
+    padding: 0.5rem 3rem;
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+}
+.btn:hover{
+    background-color: #F76B1C;
+    border: none;
+}
