@@ -1,0 +1,22 @@
+#logo{
+    height: 60px;
+    
+    
+}
+.logo{
+        /* padding-bottom: 4%; */
+        padding: 2rem 0rem 1.5rem 0rem;
+        border-bottom: 1px solid #2E6E9A;
+        margin-left:20%;
+        margin-right: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+@media screen and (max-width:750px){
+    .logo{
+        margin: 0% 0%;
+        padding: 2rem 0rem 1.5rem 0rem;
+    }
+}
+

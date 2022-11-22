@@ -1,0 +1,28 @@
+
+<app-const-assets></app-const-assets>
+<app-navbar></app-navbar>
+
+<div class="d-flex justify-content-center" *ngIf="load">
+    <div class="spinner-border" role="status">
+        <span class="sr-only" class="loading"></span>
+    </div>
+</div>
+
+<div  *ngIf="noload">
+    <div class="gpc">
+        <div class="chars" *ngFor="let planet of planets.results" routerLink="/planetdetails" (click)="planetdetail(planets.results.indexOf(planet))">
+            <li class="char">{{planet.name|uppercase}}</li>
+        
+        </div>
+        <div class="btncenter">
+            <button class="btn" (click)="prev(planets.previous)" [ngClass]="disable">PREVIOUS</button>
+            <button class="btn" (click)="next(planets.next)">NEXT</button>
+        </div>
+    </div>
+    {{deactivate()}}
+   
+    
+    <div class="footermain">
+        <app-footer></app-footer>
+    </div>
+</div>

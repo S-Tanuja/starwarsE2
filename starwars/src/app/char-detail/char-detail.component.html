@@ -1,0 +1,59 @@
+<div>
+    <app-const-assets></app-const-assets>
+    <app-navbar></app-navbar>
+    <div class="d-flex justify-content-center" *ngIf="load">
+        <div class="spinner-border" role="status">
+            <span class="sr-only" class="loading"></span>
+        </div>
+    </div>
+
+    <div class="container-parent" *ngIf="unload">
+        <div class="container">
+            <div class="img-div">
+                <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvsPsYeRKEFXVQJbrC9WnIQ_7uBxGRYf2DRg&usqp=CAU" alt="" id="img-size" /> -->
+                <img src="https://source.unsplash.com/random?sig={{getRandomNumber()}}" id="img-size">
+            </div>
+            <div class="detail-div">
+                <h1 class="heading-name">{{characters?.name}}</h1>
+                <!-- <span>Designation:Sentient Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam perferendis
+                    eius consequatur pariatur cupiditate placeat itaque quo hic nemo atque! Laborum eligendi et
+                    repudiandae hic incidunt commodi officia blanditiis! Fuga corporis sequi pariatur a.</span> -->
+                <li class="desc">Birth year : <span class="info">{{characters?.height}}</span></li>
+                <li class="desc">Hair Color : <span class="info">{{characters?.hair_color  | titlecase}}</span></li>
+                <li class="desc">Skin Color : <span class="info">{{characters?.skin_color  | titlecase}}</span></li>
+                <li class="desc">Gender : <span class="info">{{characters?.gender  | titlecase}}</span></li>
+                <li class="desc">Height : <span class="info">{{characters?.height}}</span></li>
+                <li class="desc">Mass : <span class="info">{{characters?.mass  | titlecase}}</span></li>
+                <li class="desc">Eye Color : <span class="info">{{characters?.eye_color | titlecase}}</span></li>
+                <!-- <span class="desc">Designation:<span class="info">Info</span>
+                <span class="desc">Designation:<span class="info">Info</span>
+                <span class="desc">Designation:<span class="info">Info</span>
+                <span class="desc">Designation:<span class="info">Info</span>
+                <span class="desc">Designation:<span class="info">Info</span>
+                <span class="desc">Designation:<span class="info">Info</span> -->
+            </div>
+        </div>
+      
+    </div>
+    <div class="footermain"><app-footer></app-footer></div>
+        </div>
+    
+<!-- <div class="container-parent">
+    <div class="container">
+        <div class="charimg">
+            <img src="/assets/yoda.jpeg" alt="" id="char-img">
+        </div>
+        <div class="details">
+            <span class="name">YODA</span>
+            <span class="info"><span class="category">Species:</span>w4y665u576iuj65 w4y665u576iuj6 jvhxv  nvccccccccghghghf vgbw4y665u576iuj6</span>
+            <span class="info"><span class="category">Species:</span>w4y665u576iuj65</span>
+            <span class="info"><span class="category">Species:</span>w4y665u576iuj65</span>
+            <span class="info"><span class="category">Species:</span>w4y665u576iuj65</span>
+            <span class="info"><span class="category">Species:</span>w4y665u576iuj65</span>
+            <span class="info"><span class="category">Species:</span>w4y665u576iuj65xcnbnbcgdnvlerem lorem50 50
+        </span>
+            <span class="info"><span class="category">Species:</span>w4y665u576iuj65</span>
+          
+        </div>
+    </div>
+</div> -->

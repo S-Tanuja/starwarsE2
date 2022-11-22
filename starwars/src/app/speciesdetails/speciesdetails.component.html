@@ -1,0 +1,35 @@
+
+<div>
+    <app-const-assets></app-const-assets>
+    <app-navbar></app-navbar>
+    <div class="container-parent">
+        <div class="container">
+            <div class="img-div">
+                <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy9N5A0J4ijZet7AG11RWOt-Wx4BaKt5HDaw&usqp=CAU" alt="" id="img-size" /> -->
+                <img src="https://source.unsplash.com/random?sig={{getRandomNumber()}}" id="img-size">
+            </div>
+            <div class="detail-div">
+                <h1 class="heading-name">{{speciesdetails?.name}}</h1>
+            
+                <li class="desc">Classification : <span class="info">{{speciesdetails?.classification | titlecase}}</span></li>
+
+                <li class="desc">Average Lifespan: <span class="info">{{speciesdetails?.average_lifespan | titlecase}}</span></li>
+                <li class="desc">Average Height: <span class="info">{{speciesdetails?.average_height | titlecase}}</span></li>
+                <li class="desc">Producer : <span class="info">{{speciesdetails?.producer  | titlecase}}</span></li>
+                <li class="desc">Release Date: <span class="info">{{speciesdetails?.release_date}}</span></li>
+                <li class="desc">Designation: <span class="info">{{speciesdetails?.designation| titlecase}}</span></li>
+                <li class="desc">Eye color: <span class="info">{{speciesdetails?.eye_colors | titlecase}}</span></li>
+                <li class="desc">Classification : <span class="info">{{speciesdetails?.classification | titlecase}}</span></li>
+                <!-- <li class="desc">Release Date: <span class="info">{{speciesdetails?.release_date}}</span></li>
+                <span>Designation:Sentient</span>
+                <span>Designation:Sentient</span>
+                <span>Designation:Sentient</span>
+                <span>Designation:Sentient</span>
+                <span>Designation:Sentient</span>
+                <span>Designation:Sentient</span>
+                <span>Designation:Sentient</span> -->
+            </div>
+        </div>
+    </div>
+    <div class="footermain"><app-footer></app-footer></div>
+</div>

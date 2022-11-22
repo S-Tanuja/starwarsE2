@@ -1,0 +1,35 @@
+
+<div>
+    <app-const-assets></app-const-assets>
+    <app-navbar></app-navbar>
+
+<div class="d-flex justify-content-center" *ngIf="load">
+    <div class="spinner-border" role="status">
+        <span class="sr-only" class="loading"></span>
+    </div>
+</div>
+
+   <div *ngIf="noload">
+    <div class="container-parent">
+        <div class="container">
+            <div class="img-div">
+                <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYIc-gTsX9qdYibZPLzMTzMoHgV9R82Hbl_K3Y_V_adB6BT5VVCtINCS9jo_hxkHDHw_g&usqp=CAU" alt="" id="img-size" /> -->
+                <img src="https://source.unsplash.com/random?sig={{getRandomNumber()}}" id="img-size">
+            </div>
+            <div class="detail-div">
+                <h1 class="heading-name">{{planetdetail.name}}</h1>
+                <li class="desc">Climate : <span class="info">{{planetdetail?.climate | titlecase}}</span></li>
+
+                <li class="desc">Diameter: <span class="info">{{planetdetail?.diameter | titlecase}}</span></li>
+                <li class="desc">Rotation period: <span class="info">{{planetdetail?.rotation_period| titlecase}}</span></li>
+                <li class="desc">Producer : <span class="info">{{planetdetail?.producer  | titlecase}}</span></li>
+                <li class="desc">Gravity: <span class="info">{{planetdetail?.gravity}}</span></li>
+                <li class="desc">Orbital period: <span class="info">{{planetdetail?.orbital_period| titlecase}}</span></li>
+                <li class="desc">Population: <span class="info">{{planetdetail?.population | titlecase}}</span></li>
+                <li class="desc">Surface water : <span class="info">{{planetdetail?.surface_water| titlecase}}</span></li>
+            </div>
+        </div>
+    </div>
+    <div class="footermain"><app-footer></app-footer></div>
+</div>
+   </div>

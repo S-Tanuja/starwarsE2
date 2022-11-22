@@ -1,0 +1,37 @@
+.nav {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-size: 12px;
+    border-bottom: 1px solid #2E6E9A;
+    /* border-top: 1px solid #2E6E9A; */
+    margin: auto;
+    width: 60%;
+    margin-bottom: 1%;
+    align-items: center;
+    /* padding: 12px; */
+}
+
+.nav::-webkit-scrollbar {
+    display: none;
+}
+
+.char_grp {
+    padding: 1rem;
+    cursor: pointer;
+    font-family: "Open Sans", "sans-serif"
+    /* padding-left: 5px; */
+}
+.active{
+    background-color: #00aaff5d;
+}
+
+@media screen and (max-width:750px) {
+    .nav{
+        width: 100%;
+        /* margin:0% 2%; */
+        overflow-x: auto;
+        justify-content: left;
+       margin-bottom: 1rem;
+    }
+}

@@ -1,0 +1,38 @@
+
+<div>
+    <app-const-assets></app-const-assets>
+    <app-navbar></app-navbar>
+
+    <div class="d-flex justify-content-center" *ngIf="load">
+        <div class="spinner-border" role="status">
+            <span class="sr-only" class="loading"></span>
+        </div>
+    </div>
+
+    <div class="container-parent" *ngIf="unload">
+        <div class="container">
+            <div class="img-div">
+                <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRw9xV8S3OVmBYsSLzcP_My0jDjgMSQNkgNA&usqp=CAU" alt="" id="img-size" /> -->
+                <img src="https://source.unsplash.com/random?sig={{getRandomNumber()}}" id="img-size">
+            </div>
+            <div class="detail-div">
+                <h1 class="heading-name">{{films?.title}}</h1>
+            
+                <li class="desc">Episode id : <span class="info">{{films?.episode_id}}</span></li>
+
+               <div class="iparent">
+                <div class="desc">Opening crawl : </div>
+                <div class="info">{{films?.opening_crawl | titlecase}}</div>
+               </div>
+                <li class="desc">Director: <span class="info">{{films?.director  | titlecase}}</span></li>
+                <div class="iparent">
+                    <div class="desc">Producer :</div> 
+                    <div class="info">{{films?.producer  | titlecase}}</div>
+                </div>
+                <li class="desc">Release Date: <span class="info">{{films?.release_date}}</span></li>
+               
+            </div>
+        </div>
+    </div>
+    <div class="footermain"><app-footer></app-footer></div>
+</div>

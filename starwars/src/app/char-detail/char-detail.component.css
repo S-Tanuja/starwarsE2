@@ -1,0 +1,150 @@
+.loading{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 70px;
+    height: 70px;
+    animation: spin 1s linear infinite;
+    }
+
+.container-parent {
+    background-color: rgb(117, 188, 255, 0.1);
+    width: 61%;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+.container{
+    display: flex;
+    margin: auto;
+    width: 85%;
+    gap:1.5rem;
+}
+
+#img-size{
+    width: 270px;
+    height: 270px;
+}
+
+.detail-div {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 54%;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 0;
+    margin-top: 50px;
+    margin-bottom: 41px;
+    overflow-y: auto;
+    height: 275px;
+    line-height: 32px;
+    overflow-x: hidden;
+    color: white;
+}
+
+.img-div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    object-fit: cover;
+}
+
+.heading-name {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    text-align: start;
+    padding-bottom: 10px;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-track {
+    width: 4px;
+}
+
+::-webkit-scrollbar-button,
+::-webkit-scrollbar-track-piece,
+::-webkit-scrollbar-corner,
+::-webkit-resizer {
+    display: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #00a8ff;
+}
+
+::-webkit-scrollbar-track {
+    background-image: url("https://i.imgur.com/GvV1R30.png");
+    opacity: 90%;
+    background-repeat: repeat-y;
+    background-size: contain;
+    background-color: transparent;
+}
+.footermain{
+    margin-top: 5rem;
+}
+.desc{
+    font-style:"Open Sans", sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    color: #a5c1d3;
+}
+.info{
+    font-style:"Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+    color:white;
+}
+li{
+    list-style: none;
+}
+
+@media screen and (max-width:960px) {
+    #img-size{
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width:700px) {
+    .nav {
+        width: 100%;
+        margin: 0% 2%;
+        overflow-x: auto;
+        justify-content: left;
+    }
+
+    .container{
+        flex-direction: column;
+    }
+
+    .container-parent {
+        width: 80%;
+        background-color: transparent;
+    }
+
+    .detail-div {
+        height: 230px;
+        width: 100%;
+        margin-top: 2%;
+    }
+/* 
+    .detail-div::-webkit-scrollbar {
+        display: none;
+    } */
+    .footermain{
+        margin-top: -8rem;
+    }
+    #img-size{
+        width: 90%;
+        height: 77%;
+    }
+    .img-div{
+        width: 100%;
+    }
+}

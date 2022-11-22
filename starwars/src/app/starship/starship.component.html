@@ -1,0 +1,27 @@
+
+
+<app-const-assets></app-const-assets>
+<app-navbar></app-navbar>
+
+<div class="d-flex justify-content-center" *ngIf="load">
+    <div class="spinner-border" role="status">
+        <span class="sr-only" class="loading"></span>
+    </div>
+</div>
+<div *ngIf="noload">
+   <div class="gpc">
+    <div class="chars" *ngFor="let starship of starships.results" routerLink="/starshipdetails" (click)="starshipdetails(starships.results.indexOf(starship))">
+        <li class="char">{{starship.name|uppercase}}</li>
+       
+    </div>
+    <div class="btncenter">
+        <button class="btn" (click)="prev(starships.previous)" [ngClass]="disable">PREVIOUS</button>
+        <button class="btn" (click)="next(starships.next)">NEXT</button>
+    </div>
+   </div>
+    {{deactivate()}}
+    
+    <div class="footermain">
+        <app-footer></app-footer>
+    </div>
+</div>

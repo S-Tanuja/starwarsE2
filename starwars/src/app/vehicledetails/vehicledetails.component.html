@@ -1,0 +1,28 @@
+<div>
+    <app-const-assets></app-const-assets>
+    <app-navbar></app-navbar>
+    <div class="container-parent">
+        <div class="container">
+            <div class="img-div">
+                <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcPXiM6knNP4OCH-pFQhggU0L0_eqegDUaWQ&usqp=CAU" alt="" id="img-size" /> -->
+                <img src="https://source.unsplash.com/random?sig={{getRandomNumber()}}" id="img-size">
+            </div>
+            <div class="detail-div">
+                <h1 class="heading-name">{{vehicledetails.name}}</h1>
+                <li class="desc">Cargo capacity : <span class="info">{{vehicledetails?.cargo_capacity | titlecase}}</span></li>
+                <li class="desc">Consumables : <span class="info">{{vehicledetails?.consumables | titlecase}}</span></li>
+                <li class="desc">Cost-in-credits : <span class="info">{{vehicledetails?.cost_in_credits  | titlecase}}</span></li>
+            <div class="iparent">
+                <div class="desc">Manufacturer:&nbsp; </div>
+                <div class="info">{{vehicledetails?.manufacturer}}</div>
+            </div>
+                <li class="desc">Model : <span class="info">{{vehicledetails?.model| titlecase}}</span></li>
+                <li class="desc">Max atmosphering speed : <span class="info">{{vehicledetails?.max_atmosphering_speed| titlecase}}</span></li>
+                <li class="desc">Passengers : <span class="info">{{vehicledetails?.passengers | titlecase}}</span></li>
+                
+
+            </div>
+        </div>
+    </div>
+    <div class="footermain"><app-footer></app-footer></div>
+</div>
